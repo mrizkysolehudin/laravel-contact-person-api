@@ -70,6 +70,17 @@ Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
 
 
+### Update Contact API #249
+PUT http://localhost:8000/api/contacts/9
+Accept: application/json
+Content-Type: application/json
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
+{
+    "first_name" : "Bang",
+    "last_name" : "Jali juli",
+    "email" : "jali@gmail.com",
+    "phone" : "08197643565756"
+}
 
 
