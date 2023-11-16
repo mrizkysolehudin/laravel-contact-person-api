@@ -55,9 +55,9 @@ Accept: application/json
 Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
 {
-    "first_name" : "Bang2",
-    "last_name" : "Jali2",
-    "email" : "jali2@gmail.com",
+    "first_name" : "Anjar",
+    "last_name" : "",
+    "email" : "anjar@gmail.com",
     "phone" : "08197643565756"
 }
 
@@ -87,5 +87,11 @@ Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
 ### Delete Contact API #249
 DELETE http://localhost:8000/api/contacts/11
+Accept: application/json
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
+
+
+### Search Contact API
+GET http://localhost:8000/api/contacts?email=alex
 Accept: application/json
 Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
