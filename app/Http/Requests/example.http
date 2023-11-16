@@ -118,7 +118,21 @@ Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
 
 ### Get Address API #25
-GET http://localhost:8000/api/contacts/12/addresses/3
+GET http://localhost:8000/api/contacts/12/addresses/2
 Accept: application/json
 Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
+
+### Update Address API #25
+PUT http://localhost:8000/api/contacts/12/addresses/1
+Accept: application/json
+Content-Type: application/json
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
+
+{
+    "street": "Jalan Kebon Jala",
+    "city" : "Jakarta",
+    "province": "DKI Jakarta",
+    "country": "Indonesia",
+    "postal_code": "473983"
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AddressCreateRequest;
+use App\Http\Requests\AddressUpdaateRequest;
 use App\Http\Resources\AddressResource;
 use App\Models\Address;
 use App\Models\Contact;
@@ -63,6 +64,19 @@ class AddressController extends Controller
         $user = Auth::user();
         $contact = $this->getContact($user, $idContact);
         $address = $this->getAddress($contact, $idAddress);
+
+        return new AddressResource($address);
+    }
+
+    public function update(int $idContact, int $idAddress, AddressUpdaateRequest $request): AddressResource
+    {
+        $user = Auth::user();
+        $contact = $this->getContact($user, $idContact);
+        $address = $this->getAddress($contact, $idAddress);
+
+        $data = $request->validated();
+        $address->fill($data);
+        $address->save();
 
         return new AddressResource($address);
     }
