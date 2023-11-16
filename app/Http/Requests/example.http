@@ -136,3 +136,10 @@ Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
     "country": "Indonesia",
     "postal_code": "473983"
 }
+
+
+
+### Remove Address API #24
+DELETE http://localhost:8000/api/contacts/12/addresses/4
+Accept: application/json
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
