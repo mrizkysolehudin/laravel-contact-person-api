@@ -42,4 +42,28 @@ class AddressController extends Controller
 
         return (new AddressResource($address))->response()->setStatusCode(201);
     }
+
+    private function getAddress(Contact $contact, int $idAddress): Address
+    {
+        $address = Address::where('contact_id', $contact->id)->where('id', $idAddress)->first();
+        if (!$address) {
+            throw new HttpResponseException(response()->json([
+                'errors' => [
+                    "message" => [
+                        "not found"
+                    ]
+                ]
+            ])->setStatusCode(404));
+        }
+        return $address;
+    }
+
+    public function get(int $idContact, int $idAddress): AddressResource
+    {
+        $user = Auth::user();
+        $contact = $this->getContact($user, $idContact);
+        $address = $this->getAddress($contact, $idAddress);
+
+        return new AddressResource($address);
+    }
 }
