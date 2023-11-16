@@ -1,3 +1,0 @@
-GET http://localhost:8000/api/users/current
-Accept: application/json
-Authorization: e7fcfe45-236a-40fe-be31-dc1433a3bbc5

@@ -9,6 +9,8 @@ Accept: application/json
     "name": "c. ronaldo"
 }
 
+
+
 ### Login User API
 POST http://localhost:8000/api/users/login
 Content-Type: application/json
@@ -19,20 +21,40 @@ Accept: application/json
     "password": "121212"
 }
 
+
+
 ### Get Current User API
 GET http://localhost:8000/api/users/current
 Accept: application/json
-Authorization: 3542fbc3-bf40-4b2e-b3a8-eda083057983
+Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
+
+
 
 ### Update Current User API
 PATCH http://localhost:8000/api/users/current
 Content-Type: application/json
 Accept: application/json
-Authorization: 3542fbc3-bf40-4b2e-b3a8-eda083057983
+Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
 
 {
-    "name" : "messo oo"
+    "name" : "messo"
 }
 
+### Logout User API
+DELETE http://localhost:8000/api/users/logout
+Accept: application/json
+Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
 
 
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
+
+{
+    "first_name" : "Bang",
+    "last_name" : "Jali",
+    "email" : "jali@gmail.com",
+    "phone" : "08197643565756"
+}
