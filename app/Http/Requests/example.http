@@ -26,7 +26,7 @@ Accept: application/json
 ### Get Current User API
 GET http://localhost:8000/api/users/current
 Accept: application/json
-Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
 
 
@@ -34,23 +34,25 @@ Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
 PATCH http://localhost:8000/api/users/current
 Content-Type: application/json
 Accept: application/json
-Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
 {
     "name" : "messo"
 }
 
+
 ### Logout User API
 DELETE http://localhost:8000/api/users/logout
 Accept: application/json
-Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
+
 
 
 ### Create Contact API
 POST http://localhost:8000/api/contacts
 Content-Type: application/json
 Accept: application/json
-Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 
 {
     "first_name" : "Bang",
@@ -58,3 +60,16 @@ Authorization: 95c67ac7-5926-4579-b1cb-94fd4c74a370
     "email" : "jali@gmail.com",
     "phone" : "08197643565756"
 }
+
+
+
+### Get Contact API #249
+GET http://localhost:8000/api/contacts/9
+Accept: application/json
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
+
+
+
+
+
+
