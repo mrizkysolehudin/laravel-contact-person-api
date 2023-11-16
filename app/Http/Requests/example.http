@@ -95,3 +95,22 @@ Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
 GET http://localhost:8000/api/contacts?email=alex
 Accept: application/json
 Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
+
+
+
+
+
+
+### Create Address API #250
+POST http://localhost:8000/api/contacts/12/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 129d9400-1adb-456a-a914-f4055b28a9d6
+
+{
+    "street": "Jalan Kebon Jeli",
+    "city" : "Jakarta",
+    "province": "DKI Jakarta",
+    "country": "Indonesia",
+    "postal_code": "473983"
+}
